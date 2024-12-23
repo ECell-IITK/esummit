@@ -554,3 +554,17 @@ Speakers
   }
   
 
+
+  /* 
+  ==========
+  sponsors
+  ==========
+   */
+   @media screen and (max-width:500px) {
+    
+    .sponsor_card{
+        width: 70vw;
+        margin: 0 auto;
+    }
+   }
+   
