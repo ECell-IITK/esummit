@@ -1,15 +1,6 @@
 {
   "sections": [
-      {
-        "title":"CRYPTO CRAZE",
-        "button": "crypto",
-        "image": "CC.svg",
-        "description": "Get ready to ride the CryptoCraze wave, a thrilling virtual crypto trading competition where fortune favors the boldest! Seize control of your financial destiny and showcase your trading prowess. Dive into the undiscovered realms of the entrepreneurial world!",
-        "imageUrl":"CC_bg.jpg",
-        "link": "./comp1.html"
-      
-      
-      },
+  
       {
         "title":"DECRYPT",
         "button": "DECRYPT",
@@ -25,7 +16,7 @@
         "image": "BAA.svg",
         "description": "Experience the investor's perspective in Be an Angel:Shark Tank Edition. Role-play as an Angel Investor with $5 million to invest. Assess startups, pitch investment strategies, and face VC judges. Understand both sides of the table in this nerve-wracking pitch competition.",
         "imageUrl":"BAA_bg.jpg",
-        "link": "./comp3.html"
+        "link": "https://unstop.com/o/7IMWYPX?lb=g2UyCfb"
 
 
         
@@ -36,7 +27,7 @@
         "image": "SYS.svg",
         "description": "Prepare to unleash your marketing genius in the Sell Your Sole competition! Step into the shoes of a CMO and craft a game-changing marketing campaign for an existing brand. It's your chance to redefine success!",
         "imageUrl":"SYS_bg.jpg",
-        "link": "./comp4.html"
+        "link": "https://unstop.com/o/2oKBcHN?lb=g2UyCfb"
 
 
       },
@@ -56,7 +47,7 @@
         "image": "MUC.svg",
         "description": "Unlock the thrill of corporate leadership! Join Model United Corporations and immerse yourself in the world of CEOs, CMOs, and CFOs. Conquer high-pressure decision-making, strategic challenges, and teamwork. Sharpen your skills, seize the spotlight, and prove you've got what it takes to lead in the boardroom. Join the competition, transform into a corporate titan!",
         "imageUrl":"MUC_bg.jpg",
-        "link": "./comp6.html"
+        "link": "https://unstop.com/o/unhNs36?lb=g2UyCfb"
 
 
       }
