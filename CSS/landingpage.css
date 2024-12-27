@@ -88,15 +88,24 @@ landing_page
 
 #plane{
     /* transform: translateX(-300%); */
-    animation: planeMove 10s linear infinite;
+    /* transform: translateY(0%);
+    transform: translateY(10%);
+    transform: translateY(20%);
+    transform: translateY(-20%); */
+    animation: planeMove 5s linear infinite;
 }
 
 @keyframes planeMove {      
     0% {
-        transform: translateX(200%);
+        transform: translateY(5%);
+        
+    }
+    50% {
+        transform: translateY(-10%);
+        /* transform: translateX(5%); */
     }
     100% {
-        transform: translateX(-100%);
+        transform: translateY(5%);
     }
 }
 
