@@ -97,15 +97,15 @@ landing_page
 
 @keyframes planeMove {      
     0% {
-        transform: translateY(5%);
+        transform: translateY(1.5%);
         
     }
     50% {
-        transform: translateY(-10%);
+        transform: translateY(-1.5%);
         /* transform: translateX(5%); */
     }
     100% {
-        transform: translateY(5%);
+        transform: translateY(1.5%);
     }
 }
 
