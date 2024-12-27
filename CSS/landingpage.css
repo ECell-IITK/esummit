@@ -86,6 +86,21 @@ landing_page
 }
 
 
+#plane{
+    /* transform: translateX(-300%); */
+    animation: planeMove 10s linear infinite;
+}
+
+@keyframes planeMove {      
+    0% {
+        transform: translateX(200%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
 @media screen and (max-width:446px) {
     #landing_page{
         height:100vh;
