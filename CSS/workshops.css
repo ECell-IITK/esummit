@@ -52,10 +52,11 @@ workshops
     align-items: center;
     transition: rotate 1s;
     border-radius: 100%;  
+
  }
 
  .items{ 
-    position: relative;
+    /* position: relative; */
     background: #f0f0f0;
     height: 150px;
     width: 150px;
@@ -120,7 +121,8 @@ workshops
     background-color: #fffdfd00 !important;
    }
     .next, .prev{
-        height: 3rem;
+        
+      eight: 3rem;
         width: 3rem;
         color: #320b3d;
         background-color: #ffffff;

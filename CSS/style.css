@@ -120,6 +120,13 @@ img{
     display: block;
     width: 100%;
 }
+img {
+    -webkit-user-drag: none; /* For Safari and Chrome */
+    -moz-user-drag: none;    /* For Firefox */
+    -ms-user-drag: none;     /* For Internet Explorer and Edge */
+    /* user-drag: none;         Standard property */
+    pointer-events: none;    /* Optional: Prevent pointer events on images */
+}
 h1,
 h2,
 h3,

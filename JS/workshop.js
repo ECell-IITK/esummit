@@ -18,7 +18,7 @@ function controlDisplay() {
     const indexing = (i) => {
         let idx = i % quantity;
         // if (idx < 0) idx = idx * -1;
-        if (idx > 0) idx = 11 - idx; 
+        if (idx > 0) idx = 6 - idx; 
         else idx = 0;
         return idx;
     };
@@ -29,6 +29,7 @@ function controlDisplay() {
             link.classList.remove('current');
         });
         items[idx].classList.add('current');
+        console.log(items[idx])
     };
 
     let i = 0; // Counter to track the current slide
