@@ -20,8 +20,8 @@ bottom: 10%;
       
       /* Child circles */
       .days_child {
-        min-width: 40px;            
-        min-height: 40px;           
+        min-width: 50px;            
+        min-height: 50px;           
         border-radius: 50%;          
         justify-content: center;     
         align-items: center;         
@@ -39,6 +39,7 @@ bottom: 10%;
     .days_child::before {
   content: '';
   position: absolute;
+  /* border: 1px solid red; */
   top: 0;
   left: 0;
   right: 0;
@@ -85,8 +86,11 @@ bottom: 10%;
       
       
       /* Hover effect */
-      .days_child:hover {
-        transform: scale(1.1);      
+      @media screen and (min-width:500px) {
+        .days_child {
+          transform: scale(1.25);      
+        }
+        
       }
       
 
