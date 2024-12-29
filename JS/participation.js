@@ -15,13 +15,15 @@ function animateNumbers(element, target, duration) {
 // Intersection Observer to detect visibility
 document.addEventListener("DOMContentLoaded", () => {
   const observer = new IntersectionObserver(
-    (entries, observer) => {
+    (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           const child = entry.target;
           const target = parseInt(child.getAttribute("data-target"), 10); // Get target number from data attribute
           animateNumbers(child, target, 2000); // Animate over 2000ms (2 seconds)
-          observer.unobserve(child); // Stop observing after animation starts
+        } else {
+          // Reset the number when the element leaves the viewport
+          entry.target.innerHTML = "0+";
         }
       });
     },

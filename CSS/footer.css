@@ -125,10 +125,19 @@
   .heart {
     color: #2f2f2f;
   }
-  
+  .footer_org2{
+    display: none;
+  }
   @media screen and (min-width: 24.375em) {
     .legal .legal__links {
       margin-left: auto;
+    }
+    .footer_org2{
+      display: block;
+      margin-top: 5rem;
+    }
+    .footer_org1{
+      display: none;
     }
   }
   
