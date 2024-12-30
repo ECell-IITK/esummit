@@ -108,6 +108,8 @@ body{
 section{
     padding-top:2.75rem;
     text-align: center;
+    position: relative;
+     z-index: 100;
 }
 section h1{
     position: relative;
@@ -217,19 +219,6 @@ nav ul li a{
     font-weight: var(--font-size-medium);
 }
 
-
-
-
-
-
-
-
-
-/* more Global Css */
-
-
-
-
 #fixed_section {
     position: fixed; /* Becomes sticky when it reaches the top */
     top: 0; /* Sticks to the top of the viewport */
@@ -270,12 +259,9 @@ nav ul li a{
 }
 
 
+/* passes */
+#passes{
 
-@media screen and (min-width:992px) {
-    section{
-        /* padding-top: 4rem; */
-    }
-    
 }
 /*
 Animation

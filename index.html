@@ -43,6 +43,7 @@
     <link rel="stylesheet" href="./CSS/speaker.css">
     <link rel="stylesheet" href="./CSS/workshops.css">
     <link rel="stylesheet" href="./CSS/trainAnimation.css">
+    <link rel="stylesheet" href="./CSS/preloader.css">
     <!-- <link rel="stylesheet" href="./CSS/service.css"> -->
     <link rel="stylesheet" href="./CSS/service.css">
     <!-- <link rel="stylesheet" href="./CSS/train.css"> -->
@@ -53,7 +54,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
 </head>
 <body>  
-
+  <!-- preloader -->
+  <div id="prelaoder">
+    <video autoplay muted>
+        <source src="./videos/PreloaderReducedSize.mp4" type="video/mp4">
+        Your browser does not support html video
+    </video>
+</div>
+<!-- end of preloader -->
   <!-- Start of Navbar -->
   <nav class="navbar navbar-expand-lg sticky-top position-fixed w-100 p-0 " style="  background:rgba(0, 0, 0, 0.54);
   backdrop-filter: blur(10px);         
@@ -391,7 +399,7 @@
   
 
     <!-- Workshop -->
-     <section id="workshops"> <!-- TODO -->
+     <section id="workshops" > <!-- TODO -->
         <div class=" workshop_heading"><h1>Workshops</h1>
           <!-- <a href="./workshop.html" target="_blank" class="btn btn-primary w_button_position" style="background: linear-gradient(90deg, #CE32F5 0%, #711D8F 100%);letter-spacing: 1px; z-index: 2000;">Read More</a>/div> -->
         
@@ -405,7 +413,7 @@
             </div>
             <div class="items" style="--position : 2">
               <a href="https://unstop.com/workshops-webinars/tradesmart-mastering-the-art-of-stock-trading-e-summit24-25-iit-kanpur-1319824" target="_blank">
-                <img src="./images/workshop/LOGO.svg">
+                <img src="./images/workshop/TS.svg">
               </a>
             </div>
             <div class="items" style="--position : 3">
@@ -461,6 +469,18 @@
       
       </div>
      </section>
+
+     
+  <!-- Passes -->
+  <section id="passes" class="section"> 
+    <h1>PASSES</h1>
+      <div class="container">
+        <div class="row">
+          <img src="./images/passes.svg" alt="">
+        </div>
+      </div>
+  </section>
+  <!-- End of Passes -->
 
      <!-- Sponsors -->
       <section id="sponsors" class="section" >
@@ -652,6 +672,7 @@
     <script src="./JS/workshop.js"></script>
     <script src="./JS/countdown.js"></script>
     <script src="./JS/landing.js"></script>
+    <script src="./JS/preloader.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <!-- Gsap Animation -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
