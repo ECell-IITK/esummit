@@ -1,5 +1,8 @@
 #speakers{
     background-color: black;
+    z-index: 700;
+    position: relative;
+    /* border: 1px solid red; */
 }
 .main-page-speaker-card img{
     width: 230px;
