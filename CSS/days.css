@@ -4,7 +4,10 @@
         grid-template-columns: 1fr;
         position: absolute;
         z-index: 2000;
-bottom: 10%;
+        bottom: 1%;
+        /* border: 1px solid red; */
+        /* left: 50%;*/
+        transform: translateX(35%); 
         /* left: 10%;   */
       }
     .days_parent {
@@ -88,7 +91,8 @@ bottom: 10%;
       /* Hover effect */
       @media screen and (min-width:500px) {
         .days_child {
-          transform: scale(1.25);      
+          transform: scale(1.25);    
+  
         }
         
       }
@@ -106,7 +110,9 @@ bottom: 10%;
           position: fixed;
           z-index: 2000;
           top: 50%; 
-          right: 0px;  
+          right: 0px; 
+          transform: translateX(0); 
+ 
   
        }
        .days_parent {
