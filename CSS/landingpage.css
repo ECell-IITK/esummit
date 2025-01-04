@@ -230,7 +230,23 @@ strip
 
 /* 
 ==========
-Train 
+Navbar 
 ==========
 */
 
+.btn-custom{
+   border: 1px solid white;
+   border-radius: 20px;
+}
+.nav-item:hover{
+    border-radius: 20px;
+    color: black;
+    background: linear-gradient(90deg, #CE32F5 0%, #711D8F 100%);}
+
+    .navbar-nav{
+        justify-content: space-evenly;
+    }
+    .nav-item{
+        width: 100%;
+        text-align: center;
+    }
