@@ -235,9 +235,10 @@ Navbar
 */
 
 .btn-custom{
-   border: 1px solid white;
-   border-radius: 20px;
-}
+    border-radius: 20px;
+    color: black;
+    background: linear-gradient(90deg, #CE32F5 0%, #711D8F 100%);}
+
 .nav-item:hover{
     border-radius: 20px;
     color: black;
