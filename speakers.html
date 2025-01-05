@@ -3,22 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Coming Soon</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="container">
-        <h1>Website Coming Soon</h1>
-        <p id="content">The content of the website will be updated soon.</p>
-    </div>
-    <script src="script.js"></script>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-Summit 2024 | E-Cell IIT Kanpur</title>
@@ -43,11 +27,13 @@
     <meta name="twitter:title" content="E-Summit 2024 | E-Cell IITK" />
     <title>E-SUMMIT’24</title>
     <!-- font Awsome -->
+    <link rel="shortcut icon" href="./images/logo.svg" type="image/x-icon" />
     <link rel="stylesheet" href="./fontawesome-free-6.7.1-web/css/all.min.css">
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <!-- Customize CSS -->
+     <link rel="stylesheet" href="./CSS/landingpage.css">
     <link rel="stylesheet" href="./CSS/style.css">
     <link rel="stylesheet" href="./CSS/competition.css">
     <link rel="stylesheet" href="./CSS/event.css">
@@ -57,6 +43,7 @@
     <link rel="stylesheet" href="./CSS/speaker.css">
     <link rel="stylesheet" href="./CSS/workshops.css">
     <link rel="stylesheet" href="./CSS/trainAnimation.css">
+    <link rel="stylesheet" href="./CSS/preloader.css">
     <!-- <link rel="stylesheet" href="./CSS/service.css"> -->
     <link rel="stylesheet" href="./CSS/service.css">
     <!-- <link rel="stylesheet" href="./CSS/train.css"> -->
@@ -67,13 +54,20 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
 </head>
 <body>  
-
+  <!-- preloader -->
+  <div id="prelaoder" style="scale: 1.25;">
+    <video autoplay muted>
+        <source src="./videos/Preloader.mp4" type="video/mp4">
+        Your browser does not support html video
+    </video>
+</div>
+<!-- end of preloader -->
   <!-- Start of Navbar -->
   <nav class="navbar navbar-expand-lg sticky-top position-fixed w-100 p-0 " style="  background:rgba(0, 0, 0, 0.54);
   backdrop-filter: blur(10px);         
   -webkit-backdrop-filter: blur(10px); 
   border: 1px solid rgba(255, 255, 255, 0.2); 
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); z-index: 1000;">
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); z-index: 1000; font-weight: 700; ">
     <div class="container-fluid d-flex justify-content-between align-items-center"  >
       <a class="navbar-brand" href="#" style="width: 110px;">
         <img src="./images/Footer/ecell-logo-with-name.svg" class="" alt="">
@@ -82,7 +76,7 @@
             <!-- Navbar Toggler -->
           
             <!-- Register Now Button - Hidden on large screens -->
-            <button class="nav-item  border rounded-5 d-none " id="Reg_lg" type="button" data-bs-toggle="collapse" data-bs-target="#navbarRegister" aria-controls="navbarRegister" aria-expanded="false" aria-label="Toggle Register" style="background: linear-gradient(90deg, #CE32F5 0%, #711D8F 100%);
+            <button class="nav-item  border rounded-5 d-none text-white " id="Reg_lg" type="button" data-bs-toggle="collapse" data-bs-target="#navbarRegister" aria-controls="navbarRegister" aria-expanded="false" aria-label="Toggle Register" style="background: linear-gradient(90deg, #CE32F5 0%, #711D8F 100%);
             width: 160px; letter-spacing: normal; font-size: 1rem;width: 7rem;height: 2.5rem; align-self: center; " onclick="window.open('https://forms.gle/M9S6N5r7YARXJjCKA', '_blank');">
             Register Now
             </button>
@@ -94,13 +88,10 @@
         <div class="collapse navbar-collapse" id="navbarNav" >
             <ul class="navbar-nav ms-auto d-flex justify-content-around w-100 gap-4 p-2 ">
               <li class="nav-item  ">
-                <a class="nav-link  text-white  " aria-current="page" href="./index.html#home">Home</a>
+                <a class="nav-link  text-white" aria-current="page" href="#landing_page">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link  text-white " href="./index.html#about">About Us</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link  text-white " href="./index.html#sponsors">Sponsors</a>
+                <a class="nav-link  text-white  " href="./index.html#about">About Us</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link  text-white " href="./index.html#competition">Competition</a>
@@ -109,13 +100,16 @@
                 <a class="nav-link  text-white " href="./index.html#workshops">Workshops</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link  text-white " href="./index.html#speakers">Speakers</a>
+                <a class="nav-link  text-white " href="./index.html#sponsors">Partners</a>
               </li>
-              <li class="nav-item" >
+              <li class="nav-item">
+                <a class="nav-link  text-white " href="./index.html#speakers">Past Speakers</a>
+              </li>
+              <!-- <li class="nav-item" >
                 <a class="nav-link  text-white  "href="./merchandise.html">Merchandise</a>
-              </li>
+              </li> -->
               <li class="nav-item" >
-                <a href="https://forms.gle/M9S6N5r7YARXJjCKA" target = "_blank" id="Reg_sm"  class=" nav-link text-black rounded-5 p-2 d-none" style="background: linear-gradient(90deg, #CE32F5 0%, #711D8F 100%);" >Register Now</a> 
+                <a href="https://forms.gle/M9S6N5r7YARXJjCKA" target = "_blank" id="Reg_sm"  class=" nav-link rounded-5 p-2 d-none text-white" style="background: linear-gradient(90deg, #CE32F5 0%, #711D8F 100%);" >Register Now</a> 
               </li>
             </ul>
         </div>
@@ -125,17 +119,44 @@
 
     <div id="fixed_section" style="background-image: url(./images/bg_light_purple.svg);">  </div>
     <div id="scroll-slide">
-    <!-- Summit Section 2024 -->  
-
-
-
-    <!-- Workshop -->
-     <section id="workshops"> <!-- TODO -->
-        <div class=" workshop_heading"><h1>Coming Soon</h1>
-        
-     
-     </section>
-
+    <!-- Past Speakers -->
+    <section id="speakers" class="section" style=" z-index: inherit; " >  
+      <h1 style="margin-bottom: 0.5rem;">PAST SPEAKERS</h1>
+      <p class="speaker_p card-text" style="position: relative; top:10%;"> Entrepreneurs who have proved themselves as the mavericks will come to share their success stories
+        and ideology.</p>
+      <div class="main-page-speaker-section-content">
+          <div class="main-page-speaker-card" data-tilt>
+              <img src="./images/speakers/speaker1.svg"  srcset="" loading="lazy">
+          </div>
+          <div class="main-page-speaker-card" data-tilt>
+              <img src="./images/speakers/speaker2.svg"  alt="" srcset="" loading="lazy">
+          </div>
+          <div class="main-page-speaker-card" data-tilt>
+              <img src="./images/speakers/speaker3.svg"  alt="" srcset="" loading="lazy">
+          </div>
+          <div class="main-page-speaker-card" data-tilt>
+              <img src="./images/speakers/speaker4.svg"  alt="" srcset="" loading="lazy">
+          </div>
+      </div>
+      <div class="main-page-speaker-section-content">
+          <div class="main-page-speaker-card" data-tilt>
+              <img src="./images/speakers/speaker5.svg"  alt="" srcset="" loading="lazy">
+          </div>
+          <div class="main-page-speaker-card" data-tilt>
+              <img src="./images/speakers/speaker6.svg"  alt="" srcset="" loading="lazy">
+          </div>
+          <!-- <div class="main-page-speaker-card">
+              <img src="./images/speakers/Group 2618.png" alt="" srcset="" loading="lazy">
+          </div> -->
+          <div class="main-page-speaker-card" data-tilt>
+              <img src="./images/speakers/speaker7.svg"  alt="" srcset="" loading="lazy">
+          </div>
+          <div class="main-page-speaker-card" data-tilt>
+              <img src="./images/speakers/speaker8.svg"  alt="" srcset="" loading="lazy">
+          </div>
+      </div>
+  </section>
+    <!-- End of Speakers -->
 
         <!-- footer -->
         <footer class="footer" >
@@ -156,7 +177,7 @@
                   <a class="footer__btn" href="mailto:esummit@ecelliitk.com">Email Us</a>
               </address>
 
-              <img src="./images/Footer/footerKaImage.svg" alt="">
+              <img class="footer_org1" src="./images/Footer/footerKaImage.svg" alt="">
               <!-- <address>
                   Room No G2,
                   Imagineering Laboratory
@@ -185,13 +206,16 @@
                           <a href="https://www.ecelliitk.org/expo">Startup Expo'24</a>
                       </li>
                       <li>
+                          <a href="https://www.ecelliitk.org/YEC/">YEC'24</a>
+                      </li>
+                      <li>
                           <a href="https://www.ecelliitk.org/#contact">Team</a>
                       </li>
+                      
                   </ul>
+                  <img class="footer_org2" src="./images/Footer/footerKaImage.svg" alt="">
+
               </li>
-
-
-
               <li class="nav__item">
                   <h2 class="nav__title">
                       Reach Out
@@ -202,7 +226,6 @@
                           <a href="#">G2, Imagineering Lab, Academic Area, IIT Kanpur - 208016
                               </a>
                       </li>
-
                       <li>
                           <a href="mailto:esummit@ecelliitk.com">esummit@ecelliitk.com</a>
                       </li>
@@ -239,6 +262,8 @@
     <script src="./JS/workshop.js"></script>
     <script src="./JS/countdown.js"></script>
     <script src="./JS/landing.js"></script>
+    <script src="./JS/preloader.js"></script>
+    <script src="./JS/navbar.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <!-- Gsap Animation -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
