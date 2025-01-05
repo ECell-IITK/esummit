@@ -6,13 +6,18 @@ workshops
 ==========
  */
  #workshops{
-    height: 98vh;
+    height: 120vh;
     overflow: hidden;
     padding-bottom: 2rem;
     position: relative;
 
  }
-
+ #workshops p{
+   margin: 0 auto;
+   max-width: 80vw;
+   text-align: justify;
+   
+ }
 
  .workshop_heading{
 
@@ -100,7 +105,7 @@ workshops
    
  @media screen and (max-width: 500px) {
   #workshops{
-    height: 80vh;
+    height: 100vh;
 
  }
 
