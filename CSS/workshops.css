@@ -102,10 +102,10 @@ workshops
         border-radius: 100%;
     }
  }
-   
+
  @media screen and (max-width: 500px) {
   #workshops{
-    height: 100vh;
+    height: 110vh;
 
  }
 
@@ -125,8 +125,8 @@ workshops
     align-items: center;
     background-color: #fffdfd00 !important;
    }
-    .next, .prev{
-        
+   .next, .prev{
+   
       eight: 3rem;
         width: 3rem;
         color: #320b3d;
