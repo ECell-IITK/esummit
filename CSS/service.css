@@ -52,6 +52,7 @@
   z-index: 1;
   transition: opacity 1s ease-in-out;
   opacity: 1;
+  border-radius: 8px;
 }
 
 /* When hovering over the card, reduce overlay opacity */
