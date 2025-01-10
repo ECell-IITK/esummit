@@ -32,13 +32,12 @@ const Train = document.getElementById("LayerT");
 const TrainS = document.getElementById("LayerTS")
 
 
+
+
+
 function controlVisibility() {
-    if (window.innerWidth < 500) {
-        
+    if (window.innerWidth < 500){
         RegisterL.classList.remove("d-none");
-
-        
-
     } else if (window.innerWidth >= 500) {
         RegisterS.classList.remove("d-none");
         LayerWater.src = "./images/2024_landing/Layerw.svg";
