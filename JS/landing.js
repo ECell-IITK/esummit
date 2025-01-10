@@ -28,7 +28,7 @@ const LayerSecond = document.querySelector("#Layer2");
 const LayerThird = document.querySelector("#Layer3");
 const RegisterL = document.getElementById("Reg_lg");
 const RegisterS = document.getElementById("Reg_sm");
-const Train = document.getElementById("LayerT2");
+const Train = document.getElementById("LayerT");
 const TrainS = document.getElementById("LayerTS")
 
 
