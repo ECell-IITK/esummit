@@ -55,19 +55,19 @@
 </head>
 <body>  
   <!-- preloader -->
-  <div id="prelaoder" style="scale: 1.25;">
+  <!-- <div id="prelaoder" style="scale: 1.25;">
     <video autoplay muted>
         <source src="./videos/Preloader.mp4" type="video/mp4">
         Your browser does not support html video
     </video>
-</div>
+</div> -->
 <!-- end of preloader -->
   <!-- Start of Navbar -->
   <nav class="navbar navbar-expand-lg sticky-top position-fixed w-100 p-0 " style="  background:rgba(0, 0, 0, 0.54);
   backdrop-filter: blur(10px);         
   -webkit-backdrop-filter: blur(10px); 
   border: 1px solid rgba(255, 255, 255, 0.2); 
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); z-index: 1000; font-weight: 700; ">
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); z-index: 1000;">
     <div class="container-fluid d-flex justify-content-between align-items-center"  >
       <a class="navbar-brand" href="#" style="width: 110px;">
         <img src="./images/Footer/ecell-logo-with-name.svg" class="" alt="">
@@ -76,7 +76,7 @@
             <!-- Navbar Toggler -->
           
             <!-- Register Now Button - Hidden on large screens -->
-            <button class="nav-item  border rounded-5 d-none text-white " id="Reg_lg" type="button" data-bs-toggle="collapse" data-bs-target="#navbarRegister" aria-controls="navbarRegister" aria-expanded="false" aria-label="Toggle Register" style="background: linear-gradient(90deg, #CE32F5 0%, #711D8F 100%);
+            <button class="nav-item  border rounded-5 d-none " id="Reg_lg" type="button" data-bs-toggle="collapse" data-bs-target="#navbarRegister" aria-controls="navbarRegister" aria-expanded="false" aria-label="Toggle Register" style="background: linear-gradient(90deg, #CE32F5 0%, #711D8F 100%);
             width: 160px; letter-spacing: normal; font-size: 1rem;width: 7rem;height: 2.5rem; align-self: center; " onclick="window.open('https://forms.gle/M9S6N5r7YARXJjCKA', '_blank');">
             Register Now
             </button>
@@ -88,10 +88,13 @@
         <div class="collapse navbar-collapse" id="navbarNav" >
             <ul class="navbar-nav ms-auto d-flex justify-content-around w-100 gap-4 p-2 ">
               <li class="nav-item  ">
-                <a class="nav-link  text-white" aria-current="page" href="#landing_page">Home</a>
+                <a class="nav-link  text-white  " href="./index.html#home">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link  text-white  " href="./index.html#about">About Us</a>
+                <a class="nav-link  text-white " href="./index.html#about">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link  text-white " href="./index.html#sponsors">Sponsors</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link  text-white " href="./index.html#competition">Competition</a>
@@ -100,16 +103,13 @@
                 <a class="nav-link  text-white " href="./index.html#workshops">Workshops</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link  text-white " href="./index.html#sponsors">Partners</a>
+                <a class="nav-link  text-white " href="./index.html#speakers">Speakers</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link  text-white " href="./index.html#speakers">Past Speakers</a>
-              </li>
-              <!-- <li class="nav-item" >
-                <a class="nav-link  text-white  "href="./merchandise.html">Merchandise</a>
-              </li> -->
               <li class="nav-item" >
-                <a href="https://forms.gle/M9S6N5r7YARXJjCKA" target = "_blank" id="Reg_sm"  class=" nav-link rounded-5 p-2 d-none text-white" style="background: linear-gradient(90deg, #CE32F5 0%, #711D8F 100%);" >Register Now</a> 
+                <a class="nav-link  text-white  "href="./merchandise.html">Merchandise</a>
+              </li>
+              <li class="nav-item" >
+                <a href="https://forms.gle/M9S6N5r7YARXJjCKA" target = "_blank" id="Reg_sm"  class=" nav-link text-black rounded-5 p-2 d-none" style="background: linear-gradient(90deg, #CE32F5 0%, #711D8F 100%);" >Register Now</a> 
               </li>
             </ul>
         </div>

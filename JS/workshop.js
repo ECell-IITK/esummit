@@ -18,7 +18,7 @@ function controlDisplay() {
     const indexing = (i) => {
         let idx = i % quantity;
         // if (idx < 0) idx = idx * -1;
-        if (idx > 0) idx = 7 - idx; 
+        if (idx > 0) idx = 12 - idx; 
         else idx = 0;
         return idx;
     };

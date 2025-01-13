@@ -272,7 +272,7 @@ Navbar
     overflow: hidden;
     transform: translateX(-50%);
     /* left: 50%; */
-    top: 35%;
+    top: 30%;
     min-width: 20%;
   }
   @media screen and(max-width:700px) {
@@ -287,7 +287,6 @@ Navbar
     color: #1e293b;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
   }
-  
   /* Active Effect */
   .glass-button:active {
     /* transform: translateY(1px) scale(0.98); */
