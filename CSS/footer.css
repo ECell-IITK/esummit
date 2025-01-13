@@ -95,6 +95,11 @@
   
   .nav__ul a {
     color: #999;
+    transition: all 0.3s ease, transform 0.3s ease;
+
+  }
+  .nav__ul a:hover {
+    color: rgb(90, 1, 90);
   }
   
   .nav__ul--extra {
@@ -121,6 +126,12 @@
     align-items: center;
     justify-content: center;
     color: white;
+    transition: all 0.3s ease, transform 0.3s ease;
+    }
+  .legal__links a:hover{
+
+    color: rgb(90, 1, 90);
+    scale: 1.25;
   }
   
   .heart {
