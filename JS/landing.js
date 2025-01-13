@@ -29,7 +29,7 @@ const LayerThird = document.querySelector("#Layer3");
 const RegisterL = document.getElementById("Reg_lg");
 const RegisterS = document.getElementById("Reg_sm");
 const Train = document.getElementById("LayerT");
-const TrainS = document.getElementById("LayerTS")
+const TrainS = document.getElementById("LayerTS");
 
 
 
@@ -45,7 +45,8 @@ function controlVisibility() {
         LayerSecond.src = "./images/2024_landing/Layer2.svg";
         LayerThird.src = "./images/2024_landing/Layer3.svg";
         // Train.src = "./images/2024_landing/LayerT.svg";
-        TrainS.src = "./images/2024_landing/LayerTS.svg";
+        TrainS.src = "./images/2024_landing/LayerT2.svg";
+        
     }
 }
 window.addEventListener('load', controlVisibility);
