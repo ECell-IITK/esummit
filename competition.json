@@ -60,6 +60,16 @@
         "link": "https://unstop.com/competitions/stock-the-stock-e-summit24-25-iit-kanpur-1319480"
 
 
+      },
+      {
+        "title":"Biz Entangle",
+        "button": "BE",
+        "image": "BE.svg",
+        "description": "The Startup Problem-Solving Challenge offers participants a chance to solve real-world challenges faced by startups and interact directly with their representatives. As part of E-Summit'24, this initiative allows students to showcase their analytical and creative problem-solving skills.",
+        "imageUrl":"BE_bg.jpg",
+        "link": "https://unstop.com/competitions/bizentangle-e-summit24-25-iit-kanpur-1328447"
+
+
       }
     
     ]
