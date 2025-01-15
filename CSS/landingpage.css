@@ -144,7 +144,7 @@ landing_page
 .typeface-packet{
     position: absolute;
     width: 90%;
-    top: 20%;
+    top: 10%;
     left: 50%;
     transform: translateX(-50%);
         z-index: 10;
@@ -272,28 +272,26 @@ Navbar
     overflow: hidden;
     transform: translateX(-50%);
     /* left: 50%; */
-    top: 30%;
+    top: 70%;
     min-width: 20%;
   }
-  @media screen and(max-width:700px) {
+  @media screen and (max-width:500px) {
     .glass-button{
-        /* width: ; */
+        top: 35%;
+
+        
     }
   }
   
-  /* Hover Effect */
   .glass-button:hover {
     background: rgba(255, 255, 255, 0.4);
     color: #1e293b;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
   }
-  /* Active Effect */
   .glass-button:active {
-    /* transform: translateY(1px) scale(0.98); */
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
   }
   
-  /* Animation Effect on Hover (Glow) */
   .glass-button::before {
     content: "";
     position: absolute;
@@ -311,7 +309,6 @@ Navbar
     z-index: -1;
   }
   
-  /* Animation Effect on Active (Ripple) */
   .glass-button::after {
     content: "";
     position: absolute;
