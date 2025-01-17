@@ -45,9 +45,9 @@ function displayContent(screen, description, section) {
 
   screen.innerHTML = `<img src="./images/competition_main/${section.image}" alt="${section.button}" style="width:150px">`;
   description.innerHTML = ` <h2>${section.title}</h2><p>${section.description}</p>
-  <a href="${section.link}"class="btn btn-primary" target="_blank" style="background: linear-gradient(90deg, #CE32F5 0%, #711D8F 100%);">Register Now</a>
   </div>`;
 }
+{/* <a href="${section.link}"class="btn btn-primary" target="_blank" style="background: linear-gradient(90deg, #CE32F5 0%, #711D8F 100%);">Register Now</a> */}
 
 
 
