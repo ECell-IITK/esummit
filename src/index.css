@@ -1,0 +1,248 @@
+@import "tailwindcss";
+
+@keyframes scroll-x {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll-x {
+  animation: scroll-x 20s linear infinite;
+}
+html {
+  scroll-behavior: smooth;
+}
+.cursor-sparkle {
+  position: fixed;
+  width: 9px;
+  height: 9px;
+  pointer-events: none;
+  border-radius: 9999px;
+  background: radial-gradient(
+    circle,
+    #00ffe1 0%,
+    rgba(133, 223, 212, 0.35) 40%,
+    transparent 70%
+  );
+  box-shadow: 0 0 10px rgba(133, 223, 212, 0.8);
+  transform: translate(-50%, -50%);
+  animation: sparkleFade 0.6s ease-out forwards;
+  z-index: 9999;
+}
+
+@keyframes sparkleFade {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(3);
+  }
+}
+
+* {
+  cursor: none;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 15s linear infinite;
+}
+
+.text-glow {
+  background-image: linear-gradient(
+    90deg,
+    #0E3833, #15554D, #1D7160, #248E80, #2BAF9A, #32C7B4, #4CD1C0, #66D0CA, #85DFD4
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 10px #2BAF9A, 0 0 20px #32C7B4, 0 0 30px #4CD1C0;
+}
+
+
+@keyframes driftReverse {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(120px, -80px); }
+}
+
+
+.flow-line {
+  animation: drift 40s linear infinite;
+}
+
+.flow-line.slow {
+  animation-duration: 55s;
+}
+
+.flow-line.slower {
+  animation-duration: 75s;
+}
+
+@keyframes dashMove {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: -1200;
+  }
+}
+
+.dot-flow {
+  animation: dashMove 18s linear infinite;
+  filter: drop-shadow(0 0 6px rgba(133, 223, 212, 0.8));
+}
+
+.dot-flow.slow {
+  animation-duration: 22s;
+}
+
+.dot-flow.slower {
+  animation-duration: 30s;
+}
+
+.glow-frame {
+  position: absolute;
+  pointer-events: none;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(94, 234, 212, 1),
+    transparent
+  );
+  filter: blur(18px);
+  opacity: 1;
+  transition: all 0.55s ease;
+}
+
+/* ===== VERY DENSE INITIAL SHUTTER ===== */
+.glow-frame.top {
+  top: -8px;
+  left: 10%;
+  right: 10%;
+  height: 14px;
+}
+
+.glow-frame.bottom {
+  bottom: -8px;
+  left: 10%;
+  right: 10%;
+  height: 14px;
+}
+
+.glow-frame.left {
+  left: -8px;
+  top: 10%;
+  bottom: 10%;
+  width: 14px;
+}
+
+.glow-frame.right {
+  right: -8px;
+  top: 10%;
+  bottom: 10%;
+  width: 14px;
+}
+
+/* ===== HOVER: GLOW FADES AWAY ===== */
+.group:hover .glow-frame {
+  opacity: 0;
+  filter: blur(30px);
+}
+
+.neon-arc {
+  animation: rotateArc 18s linear infinite;
+}
+
+@keyframes rotateArc {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.neon-frame {
+  animation: frameSweep 16s linear infinite;
+}
+
+@keyframes frameSweep {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: -1200;
+  }
+}
+
+.pixel-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(20, 40, 42, 0.9) 0%,
+      rgba(20, 80, 78, 0.9) 50%,
+      rgba(10, 20, 22, 0.95) 100%
+    );
+  overflow: hidden;
+}
+
+/* TOP PIXEL BREAK */
+.pixel-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 120px;
+  background:
+    repeating-linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.9) 0px,
+      rgba(0, 0, 0, 0.9) 6px,
+      transparent 6px,
+      transparent 12px
+    );
+  mask-image: linear-gradient(to bottom, black 30%, transparent 100%);
+}
+
+/* BOTTOM PIXEL BREAK */
+.pixel-bg::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 140px;
+  background:
+    repeating-linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.9) 0px,
+      rgba(0, 0, 0, 0.9) 5px,
+      transparent 5px,
+      transparent 11px
+    );
+  mask-image: linear-gradient(to top, black 30%, transparent 100%);
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+}
+
+.motion-safe {
+  will-change: transform, opacity;
+}
