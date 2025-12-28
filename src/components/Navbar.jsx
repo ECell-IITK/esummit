@@ -43,6 +43,17 @@ export default function Navbar() {
     return () => observer.disconnect();
   }, []);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY < window.innerHeight * 0.3) {
+        setActiveSection("landing");
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   // Detect scroll
   useEffect(() => {
     const handleScroll = () => {
