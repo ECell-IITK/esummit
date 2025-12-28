@@ -1,4 +1,4 @@
-import{r as a,u as o,a as r,j as e,m as t}from"./index-CICuSj7a.js";const f="/assets/backg-BilRNwMF.jpg";function b(){const s=a.useRef(null),n=a.useRef(null),[h,p]=a.useState(!1),{scrollYProgress:l}=o({target:n,offset:["start end","end start"]}),d=r(l,[0,1],["0%","60%"]),c=r(l,[0,1],["0%","-60%"]),{scrollYProgress:i}=o({target:s,offset:["start end","center center"]}),m=r(i,[0,1],["0%","-9%"]),x=r(i,[0,1],["0%","0%"]),u=m;return e.jsxs("section",{ref:s,id:"about",className:`\r
+import{r as a,u as o,a as r,j as e,m as t}from"./index-lnG0O-Hn.js";const f="/esummit-25/assets/backg-BilRNwMF.jpg";function b(){const s=a.useRef(null),n=a.useRef(null),[h,p]=a.useState(!1),{scrollYProgress:l}=o({target:n,offset:["start end","end start"]}),d=r(l,[0,1],["0%","60%"]),c=r(l,[0,1],["0%","-60%"]),{scrollYProgress:i}=o({target:s,offset:["start end","center center"]}),m=r(i,[0,1],["0%","-9%"]),x=r(i,[0,1],["0%","0%"]),u=m;return e.jsxs("section",{ref:s,id:"about",className:`\r
         relative z-10\r
         pt-16 pb-6\r
         px-6 md:px-12 lg:px-20\r
