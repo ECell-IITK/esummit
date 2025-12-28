@@ -1,4 +1,4 @@
-import{r as s,u as c,a,j as e,m as t}from"./index-BdseooxR.js";const u="/esummit/assets/backg-BilRNwMF.jpg",h="/esummit/assets/themeR-C3k5iFSv.mp4";function g(){const r=s.useRef(null),n=s.useRef(null),[p,v]=s.useState(!1),{scrollYProgress:l}=c({target:n,offset:["start end","end start"]}),m=a(l,[0,1],["0%","60%"]),x=a(l,[0,1],["0%","-60%"]),{scrollYProgress:i}=c({target:r,offset:["start end","center center"]}),o=a(i,[0,1],["-8%","0%"]),d=a(i,[0,1],["-6%","0%"]);return e.jsxs("section",{ref:r,id:"about",className:`\r
+import{r as s,u as c,a,j as e,m as t}from"./index-CL1d5_St.js";const u="/esummit/assets/backg-BilRNwMF.jpg",h="/esummit/assets/themeR-C3k5iFSv.mp4";function g(){const r=s.useRef(null),n=s.useRef(null),[p,v]=s.useState(!1),{scrollYProgress:l}=c({target:n,offset:["start end","end start"]}),m=a(l,[0,1],["0%","60%"]),x=a(l,[0,1],["0%","-60%"]),{scrollYProgress:i}=c({target:r,offset:["start end","center center"]}),o=a(i,[0,1],["-8%","0%"]),d=a(i,[0,1],["-6%","0%"]);return e.jsxs("section",{ref:r,id:"about",className:`\r
         relative z-10\r
         pt-16 pb-6\r
         px-6 md:px-12 lg:px-20\r
