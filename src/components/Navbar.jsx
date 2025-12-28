@@ -6,7 +6,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [activeSection, setActiveSection] = useState("landing");
+  const [activeSection, setActiveSection] = useState(null);
 
   const location = useLocation();
   const navigate = useNavigate();
@@ -30,7 +30,7 @@ export default function Navbar() {
       },
       {
         root: null,
-        rootMargin: "-45% 0px -45% 0px", // 👈 KEY FIX
+        rootMargin: "-45% 0px -45% 0px",
         threshold: 0,
       }
     );
@@ -43,9 +43,10 @@ export default function Navbar() {
     return () => observer.disconnect();
   }, []);
 
+
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY < window.innerHeight * 0.3) {
+      if (window.scrollY < window.innerHeight * 0.25) {
         setActiveSection("landing");
       }
     };
@@ -53,6 +54,7 @@ export default function Navbar() {
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
 
   // Detect scroll
   useEffect(() => {
@@ -78,6 +80,8 @@ export default function Navbar() {
       navigate(`/#${sectionId}`);
     }
   };
+
+  
   const handleLogoClick = () => {
     setIsOpen(false); // close mobile menu if open
 
