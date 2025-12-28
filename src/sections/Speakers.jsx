@@ -21,9 +21,9 @@ import logo from "../assets/images/typeface.png";
 
 function InfiniteRow({ children, direction = "left", duration = 40 }) {
   return (
-    <div className="relative overflow-hidden w-full">
+    <div className="relative w-full">
       <motion.div
-        className="flex w-max gap-3"
+        className="flex w-max gap-3 overflow-visible"
         animate={{
           x: direction === "left" ? ["0%", "-50%"] : ["-50%", "0%"],
         }}
@@ -221,25 +221,81 @@ export default function PastSpeakers() {
         </div>
 
         {/* ================= MOBILE ONLY ================= */}
-        <div className="block md:hidden text-center">
-          <h1
-            className="
-        text-3xl
-        font-black
-        font-[Archivo_Black]
-        tracking-[0.04em]
-        uppercase
-        bg-gradient-to-r
-        from-[#24BEB0]
-        via-[#6fe9dc]
-        to-white
-        bg-clip-text
-        text-transparent
-      "
-          >
-            PAST SPEAKERS
-          </h1>
-        </div>
+<div className="block md:hidden">
+  <div className="px-4">
+    <div className="flex items-center justify-center gap-3">
+      
+      {/* LEFT LINE + DOT */}
+      <div className="flex items-center flex-1 overflow-hidden">
+        <motion.div
+          className="h-[2px] flex-1 bg-gradient-to-l from-[#6fe9dc] to-transparent"
+          initial={{ scaleX: 0 }}
+          whileInView={{ scaleX: 1 }}
+          viewport={{ once: true }}
+          transformOrigin="right"
+          transition={{ duration: 0.9, ease: "easeOut" }}
+        />
+        <motion.div
+          className="w-2 h-2 rounded-full bg-[#6fe9dc] flex-shrink-0"
+          animate={{
+            boxShadow: [
+              "0 0 5px rgba(111,233,220,0.5)",
+              "0 0 10px rgba(111,233,220,0.9)",
+              "0 0 5px rgba(111,233,220,0.5)",
+            ],
+          }}
+          transition={{ duration: 1.6, repeat: Infinity }}
+        />
+      </div>
+
+      {/* TEXT */}
+      <h1
+        className="
+          shrink-0
+          text-2xl sm:text-3xl
+          font-black
+          font-[Archivo_Black]
+          tracking-[0.04em]
+          uppercase
+          bg-gradient-to-r
+          from-[#24BEB0]
+          via-[#6fe9dc]
+          to-white
+          bg-clip-text
+          text-transparent
+          whitespace-nowrap
+        "
+      >
+        PAST SPEAKERS
+      </h1>
+
+      {/* RIGHT DOT + LINE */}
+      <div className="flex items-center flex-1 overflow-hidden">
+        <motion.div
+          className="w-2 h-2 rounded-full bg-[#6fe9dc] flex-shrink-0"
+          animate={{
+            boxShadow: [
+              "0 0 5px rgba(111,233,220,0.5)",
+              "0 0 10px rgba(111,233,220,0.9)",
+              "0 0 5px rgba(111,233,220,0.5)",
+            ],
+          }}
+          transition={{ duration: 1.6, repeat: Infinity }}
+        />
+        <motion.div
+          className="h-[2px] flex-1 bg-gradient-to-r from-[#6fe9dc] to-transparent"
+          initial={{ scaleX: 0 }}
+          whileInView={{ scaleX: 1 }}
+          viewport={{ once: true }}
+          transformOrigin="left"
+          transition={{ duration: 0.9, ease: "easeOut" }}
+        />
+      </div>
+
+    </div>
+  </div>
+</div>
+
       </div>
 
       {/* ================= MARQUEE CONTAINER ================= */}
@@ -302,12 +358,14 @@ function SpeakerCard({ speaker }) {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(133,223,212,0.25),transparent_65%)]" />
 
       {/* ================= SPEAKER IMAGE ================= */}
-      <div className="absolute top-6 w-[260px] h-[202px]">
+      <div className="absolute top-6 w-[220px] h-[202px] flex justify-center">
+
         <img
           src={speaker.img}
           alt={speaker.name}
           className="
-            w-full h-full
+            max-w-full
+            max-h-full
             object-contain
             drop-shadow-2xl
           "

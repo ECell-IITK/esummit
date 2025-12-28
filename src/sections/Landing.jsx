@@ -2,9 +2,9 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-
-import bg from "../assets/images/background1 (1).svg";
-import mobilebg from "../assets/images/mobileBg.svg";
+import { Link} from "react-router-dom";
+import bg from "../assets/images/background2.svg";
+import mobilebg from "../assets/images/mobileBG (2).svg";
 import typeface from "../assets/images/typefaceSVG.svg";
 import boat from "../assets/images/boat.svg";
 
@@ -19,7 +19,7 @@ export default function Landing() {
   /* ===== ANIMATIONS ===== */
 
   // Boat movement (safe everywhere)
-  const boatX = useTransform(scrollYProgress, [0, 1], ["0vw", "-22vw"]);
+  const boatX = useTransform(scrollYProgress, [0, 1], ["0vw", "-25vw"]);
 
   // Desktop-only typeface scale
   const typeScale = useTransform(scrollYProgress, [0, 1], [1, 1.2]);
@@ -66,7 +66,7 @@ export default function Landing() {
             top-[18%]
             left-1/2
             -translate-x-1/2
-            w-[clamp(280px,60vw,560px)]
+            w-[clamp(280px,60vw,600px)]
             origin-center
             pointer-events-none
           "
@@ -79,11 +79,11 @@ export default function Landing() {
           className="
             block md:hidden
             absolute
-            top-[16%]
+            top-[18%]
             left-1/2
             -translate-x-1/2
-            w-[72vw]
-            max-w-[360px]
+            w-[80vw]
+            max-w-[400px]
             pointer-events-none
           "
           alt=""
@@ -101,10 +101,10 @@ export default function Landing() {
             left-1/2
             -translate-x-1/2
             text-center
-            font-extrabold
+            font-bold
             tracking-widest
             uppercase
-            text-teal-200
+            text-teal-300
             text-[clamp(14px,2.2vw,26px)]
             drop-shadow-[0_0_16px_rgba(45,212,191,0.6)]
             pointer-events-none
@@ -118,7 +118,7 @@ export default function Landing() {
           className="
             block md:hidden
             absolute
-            top-[28%]
+            top-[30%]
             left-1/2
             -translate-x-1/2
             text-center
@@ -126,7 +126,7 @@ export default function Landing() {
             tracking-widest
             uppercase
             text-teal-100
-            text-[clamp(12px,3.5vw,18px)]
+            text-[clamp(12px,3.8vw,18px)]
             drop-shadow-[0_0_12px_rgba(45,212,191,0.45)]
             pointer-events-none
           "
@@ -164,8 +164,9 @@ export default function Landing() {
           z-20
         "
       >
-        <button
-          className="
+        <Link to="/register">
+          <button
+            className="
             px-9 py-3
             rounded-xl
             font-bold
@@ -179,9 +180,10 @@ export default function Landing() {
             transition-all
             duration-300
           "
-        >
-          Register
-        </button>
+          >
+            Register
+          </button>
+        </Link>
       </div>
     </section>
   );

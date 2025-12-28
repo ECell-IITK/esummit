@@ -246,7 +246,7 @@ function CompetitionSection({ comp, mirrored, index }) {
             relative
             w-full md:w-1/2
             flex flex-col justify-center
-            px-6 sm:px-10 md:px-24 lg:px-40
+            px-6 sm:px-10 md:px-24 lg:px-30
             py-12 md:py-0
           "
         >
@@ -259,10 +259,8 @@ function CompetitionSection({ comp, mirrored, index }) {
               mx-auto md:mx-0
               w-full
               mw-full
-max-w-[520px] md:max-w-[620px] lg:max-w-[720px]
-
-
-              h-[24vh] sm:h-[28vh] md:h-[42vh]
+              max-w-[520px] md:max-w-[620px] lg:max-w-[720px]
+              h-[24vh] sm:h-[28vh] md:h-[45vh]
             "
           >
             <img
@@ -280,8 +278,7 @@ max-w-[520px] md:max-w-[620px] lg:max-w-[720px]
                 relative z-10
                 w-full h-full
                 object-contain
-                p-15 sm:p-14 md:p-20
-
+                p-15 sm:p-14 md:p-15
               "
               loading="lazy"
               decoding="async"
@@ -295,7 +292,6 @@ max-w-[520px] md:max-w-[620px] lg:max-w-[720px]
             w-full md:w-1/2
             flex items-center
             px-6 sm:px-10 md:px-16 lg:px-24
-
             pb-16 md:pb-0
           "
         >

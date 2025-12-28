@@ -12,7 +12,13 @@ export default function Navbar() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const sections = ["landing", "about", "workshops", "speakers"];
+    const sections = [
+      "landing",
+      "about",
+      "competitions",
+      "workshops",
+      "speakers",
+    ];
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -23,7 +29,9 @@ export default function Navbar() {
         });
       },
       {
-        threshold: 0.6, // section must be mostly visible
+        root: null,
+        rootMargin: "-45% 0px -45% 0px", // 👈 KEY FIX
+        threshold: 0,
       }
     );
 
@@ -33,26 +41,6 @@ export default function Navbar() {
     });
 
     return () => observer.disconnect();
-  }, []);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const section = document.getElementById("competitions");
-      if (!section) return;
-
-      const rect = section.getBoundingClientRect();
-
-      // section is active when its top is above mid-screen
-      // and its bottom is below mid-screen
-      const middle = window.innerHeight / 2;
-
-      if (rect.top <= middle && rect.bottom >= middle) {
-        setActiveSection("competitions");
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   // Detect scroll
