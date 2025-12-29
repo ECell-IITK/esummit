@@ -27,7 +27,7 @@ const competitions = [
   },
   {
     title: "BE AN ANGEL",
-    desc: "Experience the investor's perspective in Be an Angel:Shark Tank Edition. Role-play as an Angel Investor with $5 million to invest. Assess startups, pitch investment strategies, and face VC judges. Understand both sides of the table in this nerve-wracking pitch competition.",
+    desc: "Experience the investor's perspective in Be an Angel : Shark Tank Edition. Role-play as an Angel Investor with $5 million to invest. Assess startups, pitch investment strategies, and face VC judges. Understand both sides of the table in this nerve-wracking pitch competition.",
     image: angel,
     link: "https://unstop.com/competitions/be-an-angel-iit-kanpur-1609387",
     bg: bg4,
@@ -191,7 +191,7 @@ function CompetitionSection({ comp, mirrored, index }) {
       ref={ref}
       className="
         relative
-        min-h-[65vh] md:min-h-[70vh]
+        min-h-[65vh] md:min-h-[60vh]
         flex items-center
         overflow-hidden
       "
@@ -208,14 +208,13 @@ function CompetitionSection({ comp, mirrored, index }) {
       >
         <div
           className={`
-    absolute top-0 h-full w-[140%]
+      absolute top-0 h-full w-[140%]
     ${mirrored ? "right-[-20%]" : "left-[-20%]"}
     bg-gradient-to-r
-    ${
-      index % 2 === 0
-        ? "from-transparent via-[#0F4F48]/45 to-transparent" // darker grounded teal
-        : "from-transparent via-[#6FF2E3]/55 to-transparent" // brighter glowing teal
-    }
+    ${index % 2 === 0
+              ? "from-transparent via-[#0F4F48]/45 to-transparent" // darker grounded teal
+              : "from-transparent via-[#6FF2E3]/55 to-transparent" // brighter glowing teal
+            }
   `}
         />
 
@@ -278,7 +277,7 @@ function CompetitionSection({ comp, mirrored, index }) {
                 relative z-10
                 w-full h-full
                 object-contain
-                p-15 sm:p-14 md:p-15
+                p-12 sm:p-14 md:p-15
               "
               loading="lazy"
               decoding="async"

@@ -104,7 +104,7 @@ export default function Navbar() {
       className={`
     fixed top-4 left-1/2 -translate-x-1/2
     z-50
-    w-full max-w-7xl
+    w-full max-w-9xl
     transition-all duration-500 ease-out
     will-change-transform
 

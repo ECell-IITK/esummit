@@ -19,7 +19,7 @@ export default function Landing() {
   /* ===== ANIMATIONS ===== */
 
   // Boat movement (safe everywhere)
-  const boatX = useTransform(scrollYProgress, [0, 1], ["0vw", "-25vw"]);
+  const boatX = useTransform(scrollYProgress, [0, 1], ["0vw", "-45vw"]);
 
   // Desktop-only typeface scale
   const typeScale = useTransform(scrollYProgress, [0, 1], [1, 1.2]);
@@ -66,7 +66,7 @@ export default function Landing() {
             top-[18%]
             left-1/2
             -translate-x-1/2
-            w-[clamp(280px,60vw,600px)]
+            w-[clamp(280px,60vw,640px)]
             origin-center
             pointer-events-none
           "
@@ -97,20 +97,19 @@ export default function Landing() {
           className="
             hidden md:block
             absolute
-            top-[45%]
+            top-[46%]
             left-1/2
             -translate-x-1/2
             text-center
             font-bold
-            tracking-widest
-            uppercase
+            tracking-widest    
             text-teal-300
-            text-[clamp(14px,2.2vw,26px)]
+            text-[clamp(14px,2.2vw,30px)]
             drop-shadow-[0_0_16px_rgba(45,212,191,0.6)]
             pointer-events-none
           "
         >
-          23<sup>rd</sup> – 25<sup>th</sup> January, 2026
+          23rd – 25th January, 2026
         </motion.p>
 
         {/* ===== MOBILE DATE (STATIC) ===== */}
@@ -118,20 +117,19 @@ export default function Landing() {
           className="
             block md:hidden
             absolute
-            top-[30%]
+            top-[34%]
             left-1/2
             -translate-x-1/2
             text-center
             font-bold
             tracking-widest
-            uppercase
             text-teal-100
             text-[clamp(12px,3.8vw,18px)]
             drop-shadow-[0_0_12px_rgba(45,212,191,0.45)]
             pointer-events-none
           "
         >
-          23<sup>rd</sup> – 25<sup>th</sup> January, 2026
+          23rd – 25th January, 2026
         </p>
       </div>
 

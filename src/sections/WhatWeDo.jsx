@@ -55,7 +55,7 @@ export default function WhatWeDo() {
     {
       title: "Startup Expo",
       img: expo,
-      desc: "Startup expo offers a platform for startups to showcase their unique ideas and the opportunity to orchestrate Product Launches, network with investors, and gain exposure to a wider audience.",
+      desc: "Startup expo offers a platform for startups to showcase their unique ideas and the opportunity to orchestrate product Launches, network with investors, and gain exposure to a wider audience.",
       link: "https://www.ecelliitk.org/expo/",
     },
     {

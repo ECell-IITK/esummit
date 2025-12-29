@@ -14,7 +14,6 @@ export default function Footer() {
         relative
         text-white
         pt-12 pb-8
-        
         bg-gradient-to-b
         from-white/10
         via-white/5
@@ -33,16 +32,18 @@ export default function Footer() {
 
       <div
         className="
-          relative
-          max-w-7xl mx-auto px-6
-          grid
-          grid-cols-1
-          md:grid-cols-[1.4fr_0.9fr_0.9fr_1fr]
-          gap-10 md:gap-6
-        "
+    relative
+    max-w-9xl mx-auto
+    px-6 lg:px-10
+    grid
+    grid-cols-1
+    md:grid-cols-4
+    lg:grid-cols-[1.2fr_1fr_1fr_1fr]
+    gap-10 md:gap-8
+  "
       >
         {/* ================= ABOUT ================= */}
-        <div className="ml-4">
+        <div className="md:pr-4 lg:pr-6">
           {/* LOGO */}
           <img
             src={logo}
@@ -152,9 +153,10 @@ export default function Footer() {
           <div>
             <h3 className="text-xl font-bold mb-4 tracking-wide">Reach Out</h3>
             <p className="text-sm text-white/80 mb-2">
-              1st Floor, B wing, Old Sac Building, IIT Kanpur – 208016
+              1st Floor, B wing, Old Sac Building, IIT Kanpur, Kalyanpur – 208016
             </p>
-            <p className="text-sm text-white/80 mb-4">esummit@ecelliitk.com</p>
+            <p className="text-sm text-white/80">esummit@ecelliitk.com</p>
+            {/* <p className="text-sm text-white/80">marketing@ecelliitk.com - For any kind of sponsorship opportunity</p> */}
           </div>
 
           {/* SOCIAL ICONS — BOTTOM RIGHT */}
