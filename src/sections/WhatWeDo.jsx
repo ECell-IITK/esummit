@@ -109,13 +109,13 @@ export default function WhatWeDo() {
 
       <div
         className="
-    absolute top-0 left-0
-    w-full h-40
-    bg-gradient-to-t
-    from-transparent
-    via-[#031e1b]/80
-    to-[#031e1b]
-  "
+          absolute top-0 left-0
+          w-full h-40
+          bg-gradient-to-t
+          from-transparent
+         via-[#031e1b]/80
+         to-[#031e1b]
+        "
       />
 
       {/* ================= SOFT OVERLAY ================= */}
@@ -133,7 +133,7 @@ export default function WhatWeDo() {
       <div ref={headingRef} className="relative mb-16 overflow-hidden">
         <div className="flex items-center justify-center gap-4">
           {/* LEFT DOT + LINE */}
-          <div className="flex items-center">
+          <div className="hidden md:flex items-center">
             {/* Line */}
             <motion.div
               className="h-[2px] bg-gradient-to-l from-[#6fe9dc] to-transparent"
@@ -179,7 +179,7 @@ export default function WhatWeDo() {
           </h2>
 
           {/* RIGHT DOT + LINE */}
-          <div className="flex items-center">
+          <div className="hidden md:flex items-center">
             {/* Moving Dot */}
             <motion.div
               style={{ x: rightDotX }}

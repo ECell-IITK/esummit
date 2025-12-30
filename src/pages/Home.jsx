@@ -1,8 +1,10 @@
-import { useEffect, lazy, Suspense } from "react";
+import { useEffect, useState, lazy, Suspense } from "react";
 import { useLocation } from "react-router-dom";
-import Landing from "../sections/Landing"; 
+
+import Landing from "../sections/Landing";
 import InfiniteMarquee from "../components/InfiniteMarquee";
 import SocialSidebar from "../components/SocialSidebar";
+import IntroVideo from "../components/IntroVideo";
 
 const About = lazy(() => import("../sections/About"));
 const WhatWeDo = lazy(() => import("../sections/WhatWeDo"));
@@ -11,9 +13,23 @@ const Speakers = lazy(() => import("../sections/Speakers"));
 
 export default function Home() {
   const location = useLocation();
+  const [showIntro, setShowIntro] = useState(true);
 
   useEffect(() => {
-    if (location.hash) {
+    // Delay intro until page is painted
+    const id = requestIdleCallback(() => {
+      setShowIntro(true);
+    });
+    return () => cancelIdleCallback(id);
+  }, []);
+
+  useEffect(() => {
+    document.body.style.overflow = showIntro ? "hidden" : "auto";
+    return () => (document.body.style.overflow = "auto");
+  }, [showIntro]);
+
+  useEffect(() => {
+    if (!showIntro && location.hash) {
       const id = location.hash.replace("#", "");
       const el = document.getElementById(id);
 
@@ -23,28 +39,28 @@ export default function Home() {
             behavior: "smooth",
             block: "start",
           });
-        }, 100);
+        }, 150);
       }
     }
-  }, [location]);
+  }, [location, showIntro]);
 
   return (
-    <main className="text-white">
-      <SocialSidebar />
+    <>
+      <main className="text-white">
+        <SocialSidebar />
 
-      {/* 🚀 Load immediately (LCP) */}
-      <Landing /> {/* id="landing" */}
+        <Landing />
 
-      {/* 💤 Lazy-loaded sections */}
-      <Suspense fallback={<div className="h-[60vh]" />}>
+        <Suspense fallback={<div className="h-[60vh]" />}>
+          <InfiniteMarquee />
+          <About />
+          <WhatWeDo />
+          <Competitions />
+          <Speakers />
+        </Suspense>
+      </main>
 
-        <InfiniteMarquee />
-        <About />         {/* id="about" */}
-        {/* <InfiniteMarquee /> */}
-        <WhatWeDo />      {/* id="workshops" */}
-        <Competitions />  {/* id="competitions" */}
-        <Speakers />      {/* id="speakers" */}
-      </Suspense>
-    </main>
+      {showIntro && <IntroVideo onFinish={() => setShowIntro(false)} />}
+    </>
   );
 }

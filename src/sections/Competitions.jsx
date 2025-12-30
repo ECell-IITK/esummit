@@ -9,13 +9,10 @@ import SYS from "../assets/images/SellYourSoul.png";
 import model from "../assets/images/modelUnited.png";
 import angel from "../assets/images/beAnAngel.png";
 import bg1 from "../assets/images/bg1.jpg";
-import bg2 from "../assets/images/bg2.jpg";
-import bg3 from "../assets/images/bg3.jpg";
 import bg4 from "../assets/images/bg4.jpg";
 import bg5 from "../assets/images/bg5.jpg";
 import bg6 from "../assets/images/bg6.jpg";
 import bg7 from "../assets/images/bg7.jpg";
-import backg1 from "../assets/images/backg.jpg";
 
 const competitions = [
   {
@@ -56,6 +53,16 @@ const competitions = [
 ];
 
 export default function Competitions() {
+  /* ===== Scroll-based dot motion ===== */
+  const headingRef = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: headingRef,
+    offset: ["start end", "center center"],
+  });
+  const leftDotX = useTransform(scrollYProgress, [0, 1], [0, -380]);
+  const rightDotX = useTransform(scrollYProgress, [0, 1], [0, 380]);
+
   return (
     <section
       id="competitions"
@@ -63,38 +70,38 @@ export default function Competitions() {
     >
       <div
         className="
-    absolute top-0 left-0 w-full h-40
-    pointer-events-none
-    z-[-5]
-    bg-gradient-to-b
-    from-[#020406]
-    via-[#020406]/60
-    to-transparent
-  "
+          absolute top-0 left-0 w-full h-40
+          pointer-events-none
+          z-[-5]
+          bg-gradient-to-b
+         from-[#020406]
+         via-[#020406]/60
+          to-transparent
+        "
       />
 
       {/* ================= GRADIENT BACKGROUND ================= */}
       <div
-        className="
-    absolute inset-0 -z-30
-    bg-[radial-gradient(120%_120%_at_50%_0%,#0e2b2a_0%,#05090c_45%,#020406_100%)]
-  "
+        className=" absolute inset-0 -z-30 bg-[radial-gradient(120%_120%_at_50%_0%,#0e2b2a_0%,#05090c_45%,#020406_100%)]"
       />
 
       {/* ================= SECTION HEADING ================= */}
-      <div className="relative py-16 md:py-10 overflow-hidden">
+      <div ref={headingRef} className="relative mb-16 overflow-hidden">
         <div className="flex items-center justify-center gap-4">
-          {/* LEFT LINE + DOT */}
-          <div className="flex items-center">
+          {/* LEFT DOT + LINE */}
+          <div className="hidden md:flex items-center">
+            {/* Line */}
             <motion.div
               className="h-[2px] bg-gradient-to-l from-[#6fe9dc] to-transparent"
               initial={{ width: 0 }}
-              whileInView={{ width: "34vw" }}
+              whileInView={{ width: "40vw" }}
               transition={{ duration: 1.1, ease: "easeOut" }}
               viewport={{ once: true }}
             />
 
+            {/* Moving Dot */}
             <motion.div
+              style={{ x: leftDotX }}
               className="w-2.5 h-2.5 rounded-full bg-[#6fe9dc]"
               animate={{
                 boxShadow: [
@@ -110,20 +117,22 @@ export default function Competitions() {
           {/* TEXT */}
           <h2
             className="
-        text-center
-        text-3xl sm:text-4xl md:text-5xl
-        font-black uppercase tracking-widest
-        font-[Archivo_Black]
-        bg-gradient-to-r from-[#24BEB0] via-[#6fe9dc] to-white
-        bg-clip-text text-transparent
-      "
+              text-center
+              text-3xl sm:text-4xl md:text-5xl
+              font-black uppercase tracking-widest
+              font-[Archivo_Black]
+              bg-gradient-to-r from-[#24BEB0] via-[#6fe9dc] to-white
+              bg-clip-text text-transparent
+            "
           >
             COMPETITIONS
           </h2>
 
           {/* RIGHT DOT + LINE */}
-          <div className="flex items-center">
+          <div className="hidden md:flex items-center">
+            {/* Moving Dot */}
             <motion.div
+              style={{ x: rightDotX }}
               className="w-2.5 h-2.5 rounded-full bg-[#6fe9dc]"
               animate={{
                 boxShadow: [
@@ -135,10 +144,11 @@ export default function Competitions() {
               transition={{ duration: 1.6, repeat: Infinity }}
             />
 
+            {/* Line */}
             <motion.div
               className="h-[2px] bg-gradient-to-r from-[#6fe9dc] to-transparent"
               initial={{ width: 0 }}
-              whileInView={{ width: "34vw" }}
+              whileInView={{ width: "40vw" }}
               transition={{ duration: 1.0, ease: "easeOut", delay: 0.05 }}
               viewport={{ once: true }}
             />
@@ -211,10 +221,11 @@ function CompetitionSection({ comp, mirrored, index }) {
       absolute top-0 h-full w-[140%]
     ${mirrored ? "right-[-20%]" : "left-[-20%]"}
     bg-gradient-to-r
-    ${index % 2 === 0
-              ? "from-transparent via-[#0F4F48]/45 to-transparent" // darker grounded teal
-              : "from-transparent via-[#6FF2E3]/55 to-transparent" // brighter glowing teal
-            }
+    ${
+      index % 2 === 0
+        ? "from-transparent via-[#0F4F48]/45 to-transparent" // darker grounded teal
+        : "from-transparent via-[#6FF2E3]/55 to-transparent" // brighter glowing teal
+    }
   `}
         />
 

@@ -3,7 +3,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { Link} from "react-router-dom";
-import bg from "../assets/images/background2.svg";
+import bg from "../assets/images/DesktopBg.svg";
 import mobilebg from "../assets/images/mobileBG (2).svg";
 import typeface from "../assets/images/typefaceSVG.svg";
 import boat from "../assets/images/boat.svg";
@@ -16,12 +16,8 @@ export default function Landing() {
     offset: ["start start", "end start"],
   });
 
-  /* ===== ANIMATIONS ===== */
-
-  // Boat movement (safe everywhere)
   const boatX = useTransform(scrollYProgress, [0, 1], ["0vw", "-45vw"]);
 
-  // Desktop-only typeface scale
   const typeScale = useTransform(scrollYProgress, [0, 1], [1, 1.2]);
 
   return (
@@ -101,7 +97,7 @@ export default function Landing() {
             left-1/2
             -translate-x-1/2
             text-center
-            font-bold
+            font-semibold
             tracking-widest    
             text-teal-300
             text-[clamp(14px,2.2vw,30px)]
@@ -121,7 +117,7 @@ export default function Landing() {
             left-1/2
             -translate-x-1/2
             text-center
-            font-bold
+            font-semibold
             tracking-widest
             text-teal-100
             text-[clamp(12px,3.8vw,18px)]
