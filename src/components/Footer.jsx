@@ -1,4 +1,5 @@
 import logo from "../assets/images/LogoComplete.png";
+import footerlogo from "../assets/images/footerLogo.svg";
 import {
   FaInstagram,
   FaLinkedinIn,
@@ -30,21 +31,21 @@ export default function Footer() {
         shadow-[inset_0_0_30px_rgba(36,145,132,0.5)]"
       />
 
+      {/* ================= MAIN GRID ================= */}
       <div
         className="
-    relative
-    max-w-9xl mx-auto
-    px-6 lg:px-10
-    grid
-    grid-cols-1
-    md:grid-cols-4
-    lg:grid-cols-[1.2fr_1fr_1fr_1fr]
-    gap-10 md:gap-8
-  "
+          relative
+          max-w-9xl mx-auto
+          px-6 lg:px-10
+          grid
+          grid-cols-1
+          md:grid-cols-4
+          lg:grid-cols-[1.2fr_1fr_1fr_1fr]
+          gap-10 md:gap-8
+        "
       >
         {/* ================= ABOUT ================= */}
         <div className="md:pr-4 lg:pr-6">
-          {/* LOGO */}
           <img
             src={logo}
             alt="E-Summit Logo"
@@ -84,44 +85,32 @@ export default function Footer() {
 
         {/* ================= QUICK LINKS ================= */}
         <div>
-          <h3 className="text-xl font-bold mb-4 tracking-wide ">Quick Links</h3>
-          <ul className="space-y-2 text-sm text-white/80 ">
-            <li>
-              <a href="https://www.ecelliitk.org/" className="hover:text-white">
-                E-Cell IIT Kanpur
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.ecelliitk.org/upstart/"
-                className="hover:text-white"
-              >
-                Upstart’ 25
-              </a>
-            </li>
-            <li>
-              <a href="#landing" className="hover:text-white">
-                Startup Expo’ 25
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.ecelliitk.org/YEC/"
-                className="hover:text-white"
-              >
-                YEC’ 25
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.ecelliitk.org/#contact"
-                className="hover:text-white"
-              >
-                Team
-              </a>
-            </li>
+          <h3 className="text-xl font-bold mb-4 tracking-wide">Quick Links</h3>
+          <ul className="space-y-2 text-sm text-white/80">
+            <li><a href="https://www.ecelliitk.org/" className="hover:text-white">E-Cell IIT Kanpur</a></li>
+            <li><a href="https://www.ecelliitk.org/upstart/" className="hover:text-white">Upstart’ 25</a></li>
+            <li><a href="#landing" className="hover:text-white">Startup Expo’ 25</a></li>
+            <li><a href="https://www.ecelliitk.org/YEC/" className="hover:text-white">YEC’ 25</a></li>
+            <li><a href="https://www.ecelliitk.org/#contact" className="hover:text-white">Team</a></li>
           </ul>
         </div>
+
+        {/* <div className="mt-50">
+        <img
+          src={footerlogo}
+          alt="E-Summit 25 Footer Logo"
+          className="
+            w-[85%]
+            max-w-[720px]
+            md:w-[70%]
+            lg:w-[190%]
+            opacity-90
+            drop-shadow-[0_0_30px_rgba(45,212,191,0.45)]
+            select-none
+            pointer-events-none
+          "
+        />
+      </div> */}
 
         {/* ================= CONTACT US ================= */}
         <div>
@@ -130,78 +119,78 @@ export default function Footer() {
             Have queries or want to collaborate?
           </p>
           <p className="text-sm text-white/80 mb-4">Reach out to us anytime.</p>
-          <a href="tel:+9170000 54528">
-            <button
-              className="
-                px-5 py-1.5
-                rounded-md
-                font-semibold text-sm text-white
-                bg-gradient-to-b from-[#3bd2c1] to-[#1f8f82]
-                shadow-[0_4px_10px_rgba(0,0,0,0.4)]
-                hover:from-[#4fe6d5] hover:to-[#2ba99a]
-                transition-all duration-300
-                hover:scale-[1.08] active:scale-[0.97]
-              "
-            >
-              Get in Touch
-            </button>
-          </a>
+
+          <button
+            className="
+              px-5 py-1.5
+              rounded-md
+              font-semibold text-sm text-white
+              bg-gradient-to-b from-[#3bd2c1] to-[#1f8f82]
+              shadow-[0_4px_10px_rgba(0,0,0,0.4)]
+              hover:from-[#4fe6d5] hover:to-[#2ba99a]
+              transition-all duration-300
+              hover:scale-[1.08] active:scale-[0.97]
+            "
+          >
+            Get in Touch
+          </button>
         </div>
 
         {/* ================= REACH OUT ================= */}
-        <div className="flex flex-col justify-between h-full text-justify">
+        <div className="flex flex-col justify-between h-full">
           <div>
             <h3 className="text-xl font-bold mb-4 tracking-wide">Reach Out</h3>
             <p className="text-sm text-white/80 mb-2">
               1st Floor, B wing, Old Sac Building, IIT Kanpur, Kalyanpur – 208016
             </p>
             <p className="text-sm text-white/80">esummit@ecelliitk.com</p>
-            {/* <p className="text-sm text-white/80">marketing@ecelliitk.com - For any kind of sponsorship opportunity</p> */}
           </div>
 
-          {/* SOCIAL ICONS — BOTTOM RIGHT */}
-          <div className="flex gap-3 mt-6 md:mt-0">
-            {[
-              {
-                icon: FaInstagram,
-                link: "https://www.instagram.com/ecelliitk/",
-              },
-              {
-                icon: FaLinkedinIn,
-                link: "https://www.linkedin.com/company/ecelliitk/posts/?feedView=all",
-              },
-              { icon: FaFacebookF, link: "https://www.facebook.com/ecelliitk" },
-              { icon: FaXTwitter, link: "https://x.com/ecelliitk" },
-              {
-                icon: FaYoutube,
-                link: "https://www.youtube.com/channel/UCvxavCg0UhXq6oKkrBHc9zQ",
-              },
-            ].map(({ icon: Icon }, i) => (
-              <a
-                key={i}
-                href={i.link}
-                target="_blank"
-                className="
-                  w-9 h-9
-                  rounded-full
-                  bg-white/90 text-black
-                  flex items-center justify-center
-                  hover:scale-110
-                  hover:bg-[#3bd2c1]
-                  transition
-                "
-              >
-                <Icon size={16} />
-              </a>
-            ))}
+          <div className="flex gap-3 mt-6">
+            {[FaInstagram, FaLinkedinIn, FaFacebookF, FaXTwitter, FaYoutube].map(
+              (Icon, i) => (
+                <div
+                  key={i}
+                  className="
+                    w-9 h-9
+                    rounded-full
+                    bg-white/90 text-black
+                    flex items-center justify-center
+                    hover:scale-110
+                    hover:bg-[#3bd2c1]
+                    transition
+                  "
+                >
+                  <Icon size={16} />
+                </div>
+              )
+            )}
           </div>
         </div>
+      </div>
+
+      {/* ================= CENTER SVG ================= */}
+      <div className="relative mt-8 mb-8 lg:mt-0 lg:mb-2 flex justify-center">
+        <img
+          src={footerlogo}
+          alt="E-Summit 25 Footer Logo"
+          className="
+            w-[90%]
+            max-w-[720px]
+            md:w-[70%]
+            lg:w-[47%]
+            opacity-90
+            drop-shadow-[0_0_30px_rgba(45,212,191,0.45)]
+            select-none
+            pointer-events-none
+          "
+        />
       </div>
 
       {/* ================= BOTTOM ================= */}
       <div
         className="
-          relative mt-10 pt-4
+          relative pt-4
           border-t border-white/20
           text-center text-sm text-white/70
         "

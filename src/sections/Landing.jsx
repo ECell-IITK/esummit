@@ -3,8 +3,8 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { Link} from "react-router-dom";
-import bg from "../assets/images/DesktopBg.svg";
-import mobilebg from "../assets/images/mobileBG (2).svg";
+import bg from "../assets/images/background4.svg";
+import mobilebg from "../assets/images/mobileBg.svg";
 import typeface from "../assets/images/typefaceSVG.svg";
 import boat from "../assets/images/boat.svg";
 
@@ -62,7 +62,7 @@ export default function Landing() {
             top-[18%]
             left-1/2
             -translate-x-1/2
-            w-[clamp(280px,60vw,640px)]
+            w-[clamp(280px,60vw,600px)]
             origin-center
             pointer-events-none
           "

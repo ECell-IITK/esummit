@@ -74,7 +74,7 @@ export default function PastSpeakers() {
     },
     {
       name: "Tharun Naik",
-      role: "Entrepreneur & Creator",
+      role: "Creator",
       img: tharun,
     },
     {
