@@ -1,4 +1,4 @@
-import{r as p,u as m,a as o,j as e,m as t}from"./index-BuVyVlrN.js";import{b as u}from"./backg2-D-DbP4Uq.js";const g="/esummit/assets/UpstartPanel-CSar_iCH.JPG",f="/esummit/assets/expoSummit-DpA2EnrX.jpg",x="/esummit/assets/netDinnerSummit-CKp6EpJE.jpeg",w="/esummit/assets/yecSummit-C-eaaB4M.jpeg",b="/esummit/assets/CaCp-4-2aDgpv.jpeg",v="/esummit/assets/sip_summit-BWiYc2dP.jpg";function j({title:n,img:s,desc:l,website:d}){const a=p.useRef(null),{scrollYProgress:i}=m({target:a,offset:["start 85%","start 45%"]}),c=o(i,[0,1],[-180,0]),r=o(i,[0,.25],[0,1]);return e.jsxs("div",{ref:a,className:`\r
+import{r as p,u as m,a as o,j as e,m as t}from"./index-B7SfIpi7.js";import{b as u}from"./backg2-D-DbP4Uq.js";const g="/esummit/assets/UpstartPanel-CSar_iCH.JPG",f="/esummit/assets/expoSummit-DpA2EnrX.jpg",x="/esummit/assets/netDinnerSummit-CKp6EpJE.jpeg",w="/esummit/assets/yecSummit-C-eaaB4M.jpeg",b="/esummit/assets/CaCp-4-2aDgpv.jpeg",v="/esummit/assets/sip_summit-BWiYc2dP.jpg";function j({title:n,img:s,desc:l,website:d}){const a=p.useRef(null),{scrollYProgress:i}=m({target:a,offset:["start 85%","start 45%"]}),c=o(i,[0,1],[-180,0]),r=o(i,[0,.25],[0,1]);return e.jsxs("div",{ref:a,className:`\r
         relative\r
         h-full\r
         rounded-2xl\r
@@ -57,20 +57,20 @@ import{r as p,u as m,a as o,j as e,m as t}from"./index-BuVyVlrN.js";import{b as 
                bg-cover bg-center\r
                scale-105\r
            `,style:{backgroundImage:`url(${u})`}}),e.jsx("div",{className:`\r
-    absolute top-0 left-0\r
-    w-full h-40\r
-    bg-gradient-to-t\r
-    from-transparent\r
-    via-[#031e1b]/80\r
-    to-[#031e1b]\r
-  `}),e.jsx("div",{className:`\r
+          absolute top-0 left-0\r
+          w-full h-40\r
+          bg-gradient-to-t\r
+          from-transparent\r
+         via-[#031e1b]/80\r
+         to-[#031e1b]\r
+        `}),e.jsx("div",{className:`\r
          absolute inset-0\r
          bg-gradient-to-b\r
          from-black/10\r
          via-black/40\r
          to-black/60\r
          z-[-1]\r
-       `}),e.jsx("div",{ref:n,className:"relative mb-16 overflow-hidden",children:e.jsxs("div",{className:"flex items-center justify-center gap-4",children:[e.jsxs("div",{className:"flex items-center",children:[e.jsx(t.div,{className:"h-[2px] bg-gradient-to-l from-[#6fe9dc] to-transparent",initial:{width:0},whileInView:{width:"40vw"},transition:{duration:1.1,ease:"easeOut"},viewport:{once:!0}}),e.jsx(t.div,{style:{x:l},className:"w-2.5 h-2.5 rounded-full bg-[#6fe9dc]",animate:{boxShadow:["0 0 6px rgba(111,233,220,0.5)","0 0 14px rgba(111,233,220,0.9)","0 0 6px rgba(111,233,220,0.5)"]},transition:{duration:1.6,repeat:1/0}})]}),e.jsx("h2",{className:`\r
+       `}),e.jsx("div",{ref:n,className:"relative mb-16 overflow-hidden",children:e.jsxs("div",{className:"flex items-center justify-center gap-4",children:[e.jsxs("div",{className:"hidden md:flex items-center",children:[e.jsx(t.div,{className:"h-[2px] bg-gradient-to-l from-[#6fe9dc] to-transparent",initial:{width:0},whileInView:{width:"40vw"},transition:{duration:1.1,ease:"easeOut"},viewport:{once:!0}}),e.jsx(t.div,{style:{x:l},className:"w-2.5 h-2.5 rounded-full bg-[#6fe9dc]",animate:{boxShadow:["0 0 6px rgba(111,233,220,0.5)","0 0 14px rgba(111,233,220,0.9)","0 0 6px rgba(111,233,220,0.5)"]},transition:{duration:1.6,repeat:1/0}})]}),e.jsx("h2",{className:`\r
               text-center\r
               text-4xl md:text-5xl lg:text-5xl\r
               font-black\r
@@ -83,7 +83,7 @@ import{r as p,u as m,a as o,j as e,m as t}from"./index-BuVyVlrN.js";import{b as 
               to-white\r
               bg-clip-text\r
               text-transparent\r
-            `,children:"WHAT WE DO"}),e.jsxs("div",{className:"flex items-center",children:[e.jsx(t.div,{style:{x:d},className:"w-2.5 h-2.5 rounded-full bg-[#6fe9dc]",animate:{boxShadow:["0 0 6px rgba(111,233,220,0.5)","0 0 14px rgba(111,233,220,0.9)","0 0 6px rgba(111,233,220,0.5)"]},transition:{duration:1.6,repeat:1/0}}),e.jsx(t.div,{className:"h-[2px] bg-gradient-to-r from-[#6fe9dc] to-transparent",initial:{width:0},whileInView:{width:"40vw"},transition:{duration:1,ease:"easeOut",delay:.05},viewport:{once:!0}})]})]})}),e.jsx(t.div,{variants:a,initial:"hidden",whileInView:"visible",viewport:{amount:.12,once:!0},className:`\r
+            `,children:"WHAT WE DO"}),e.jsxs("div",{className:"hidden md:flex items-center",children:[e.jsx(t.div,{style:{x:d},className:"w-2.5 h-2.5 rounded-full bg-[#6fe9dc]",animate:{boxShadow:["0 0 6px rgba(111,233,220,0.5)","0 0 14px rgba(111,233,220,0.9)","0 0 6px rgba(111,233,220,0.5)"]},transition:{duration:1.6,repeat:1/0}}),e.jsx(t.div,{className:"h-[2px] bg-gradient-to-r from-[#6fe9dc] to-transparent",initial:{width:0},whileInView:{width:"40vw"},transition:{duration:1,ease:"easeOut",delay:.05},viewport:{once:!0}})]})]})}),e.jsx(t.div,{variants:a,initial:"hidden",whileInView:"visible",viewport:{amount:.12,once:!0},className:`\r
        grid \r
        grid-cols-1 \r
        sm:grid-cols-2 \r
