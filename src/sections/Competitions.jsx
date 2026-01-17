@@ -86,7 +86,7 @@ export default function Competitions() {
       />
 
       {/* ================= SECTION HEADING ================= */}
-      <div ref={headingRef} className="relative mb-16 overflow-hidden">
+      <div ref={headingRef} className="relative mb-8 overflow-hidden">
         <div className="flex items-center justify-center gap-4">
           {/* LEFT DOT + LINE */}
           <div className="hidden md:flex items-center">
@@ -123,6 +123,7 @@ export default function Competitions() {
               font-[Archivo_Black]
               bg-gradient-to-r from-[#24BEB0] via-[#6fe9dc] to-white
               bg-clip-text text-transparent
+              mt-8
             "
           >
             COMPETITIONS

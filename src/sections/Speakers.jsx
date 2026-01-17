@@ -262,7 +262,7 @@ function SpeakerCard({ speaker }) {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(133,223,212,0.25),transparent_65%)]" />
 
       {/* ================= SPEAKER IMAGE ================= */}
-      <div className="absolute top-6 w-[185px] h-[162px] md:w-[220px] md:h-[202px] flex justify-center">
+      <div className="absolute top-6 w-[185px] h-[161px] md:w-[220px] md:h-[201px] flex justify-center">
         <img
           src={speaker.img}
           alt={speaker.name}

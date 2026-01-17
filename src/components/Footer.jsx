@@ -87,11 +87,40 @@ export default function Footer() {
         <div>
           <h3 className="text-xl font-bold mb-4 tracking-wide">Quick Links</h3>
           <ul className="space-y-2 text-sm text-white/80">
-            <li><a href="https://www.ecelliitk.org/" className="hover:text-white">E-Cell IIT Kanpur</a></li>
-            <li><a href="https://www.ecelliitk.org/upstart/" className="hover:text-white">Upstart’ 25</a></li>
-            <li><a href="#landing" className="hover:text-white">Startup Expo’ 25</a></li>
-            <li><a href="https://www.ecelliitk.org/YEC/" className="hover:text-white">YEC’ 25</a></li>
-            <li><a href="https://www.ecelliitk.org/#contact" className="hover:text-white">Team</a></li>
+            <li>
+              <a href="https://www.ecelliitk.org/" className="hover:text-white">
+                E-Cell IIT Kanpur
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.ecelliitk.org/upstart/"
+                className="hover:text-white"
+              >
+                Upstart’ 25
+              </a>
+            </li>
+            <li>
+              <a href="#landing" className="hover:text-white">
+                Startup Expo’ 25
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.ecelliitk.org/YEC/"
+                className="hover:text-white"
+              >
+                YEC’ 25
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.ecelliitk.org/#contact"
+                className="hover:text-white"
+              >
+                Team
+              </a>
+            </li>
           </ul>
         </div>
 
@@ -120,8 +149,10 @@ export default function Footer() {
           </p>
           <p className="text-sm text-white/80 mb-4">Reach out to us anytime.</p>
 
-          <button
+          <a
+            href="tel:+919301568760"
             className="
+              inline-flex items-center justify-center
               px-5 py-1.5
               rounded-md
               font-semibold text-sm text-white
@@ -132,8 +163,8 @@ export default function Footer() {
               hover:scale-[1.08] active:scale-[0.97]
             "
           >
-            Get in Touch
-          </button>
+            📞 +91 93015 68760
+          </a>
         </div>
 
         {/* ================= REACH OUT ================= */}
@@ -141,17 +172,23 @@ export default function Footer() {
           <div>
             <h3 className="text-xl font-bold mb-4 tracking-wide">Reach Out</h3>
             <p className="text-sm text-white/80 mb-2">
-              1st Floor, B wing, Old Sac Building, IIT Kanpur, Kalyanpur – 208016
+              1st Floor, B wing, Old Sac Building, IIT Kanpur, Kalyanpur –
+              208016
             </p>
             <p className="text-sm text-white/80">esummit@ecelliitk.com</p>
           </div>
 
           <div className="flex gap-3 mt-6">
-            {[FaInstagram, FaLinkedinIn, FaFacebookF, FaXTwitter, FaYoutube].map(
-              (Icon, i) => (
-                <div
-                  key={i}
-                  className="
+            {[
+              FaInstagram,
+              FaLinkedinIn,
+              FaFacebookF,
+              FaXTwitter,
+              FaYoutube,
+            ].map((Icon, i) => (
+              <div
+                key={i}
+                className="
                     w-9 h-9
                     rounded-full
                     bg-white/90 text-black
@@ -160,11 +197,10 @@ export default function Footer() {
                     hover:bg-[#3bd2c1]
                     transition
                   "
-                >
-                  <Icon size={16} />
-                </div>
-              )
-            )}
+              >
+                <Icon size={16} />
+              </div>
+            ))}
           </div>
         </div>
       </div>

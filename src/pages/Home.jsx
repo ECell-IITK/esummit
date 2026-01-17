@@ -10,6 +10,7 @@ const About = lazy(() => import("../sections/About"));
 const WhatWeDo = lazy(() => import("../sections/WhatWeDo"));
 const Competitions = lazy(() => import("../sections/Competitions"));
 const Speakers = lazy(() => import("../sections/Speakers"));
+const Workshops = lazy(() => import("../sections/Workshop"));
 
 export default function Home() {
   const location = useLocation();
@@ -56,6 +57,7 @@ export default function Home() {
           <About />
           <WhatWeDo />
           <Competitions />
+          <Workshops />
           <Speakers />
         </Suspense>
       </main>

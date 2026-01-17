@@ -32,7 +32,7 @@ export default function Navbar() {
         root: null,
         rootMargin: "-45% 0px -45% 0px",
         threshold: 0,
-      }
+      },
     );
 
     sections.forEach((id) => {
@@ -42,7 +42,6 @@ export default function Navbar() {
 
     return () => observer.disconnect();
   }, []);
-
 
   useEffect(() => {
     const handleScroll = () => {
@@ -54,7 +53,6 @@ export default function Navbar() {
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
 
   // Detect scroll
   useEffect(() => {
@@ -81,7 +79,6 @@ export default function Navbar() {
     }
   };
 
-  
   const handleLogoClick = () => {
     setIsOpen(false); // close mobile menu if open
 
@@ -212,7 +209,7 @@ export default function Navbar() {
       {/* Mobile Dropdown */}
       {isOpen && (
         <div className="md:hidden bg-black/60 backdrop-blur-xl border-t border-white/10 rounded-b-xl">
-          <div className="flex flex-col space-y-3 px-6 py-4">
+          <div className="flex flex-col space-y-3 px-9 py-4">
             {[
               { name: "Home", href: "#landing" },
               { name: "About", href: "#about" },
