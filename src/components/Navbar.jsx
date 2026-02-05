@@ -99,12 +99,11 @@ export default function Navbar() {
   return (
     <nav
       className={`
-    fixed top-4 left-1/2 -translate-x-1/2
-    z-50
-    w-full max-w-9xl
-    transition-all duration-500 ease-out
-    will-change-transform
-
+        fixed top-4 left-1/2 -translate-x-1/2
+        z-50
+        w-full max-w-9xl
+        transition-all duration-500 ease-out
+        will-change-transform
     ${
       scrolled
         ? `
@@ -143,38 +142,55 @@ export default function Navbar() {
         {/* Desktop Nav Links */}
         <div className="hidden md:flex space-x-7 absolute left-1/2 transform -translate-x-1/2">
           {[
-            { name: "Home", href: "#landing", id: "landing" },
-            { name: "About Us", href: "#about", id: "about" },
-            { name: "Competitions", href: "#competitions", id: "competitions" },
-            { name: "Workshops", href: "#workshops", id: "workshops" },
-            // { name: "Gallery", href: "#gallery" },
-            { name: "Past Speakers", href: "#speakers", id: "speakers" },
+            { name: "Home", id: "landing" },
+            { name: "About Us", id: "about" },
+            { name: "Competitions", id: "competitions" },
+            { name: "Workshops", id: "workshops" },
+            { name: "Past Speakers", id: "speakers" },
           ].map((item) => (
             <button
               key={item.name}
               onClick={() => handleNavClick(item.id)}
               className={`
-    relative
-    text-[15px] font-semibold tracking-wide transition-all duration-300
-    ${
-      activeSection === item.id
-        ? "text-[#4CD1C0] after:scale-x-100 drop-shadow-[0_0_8px_rgba(76,209,192,0.6)]"
-        : "text-white hover:text-[#4CD1C0] after:scale-x-0"
-    }
-    after:content-['']
-    after:absolute
-    after:left-0
-    after:-bottom-1
-    after:w-full
-    after:h-[2px]
-    after:bg-gradient-to-r after:from-[#24BEB0] after:to-[#6fe9dc]
-    after:origin-left
-    after:transition-transform after:duration-300
-  `}
+                relative
+                text-[15px] font-semibold tracking-wide transition-all duration-300
+                ${
+                  activeSection === item.id
+                    ? "text-[#4CD1C0] after:scale-x-100 drop-shadow-[0_0_8px_rgba(76,209,192,0.6)]"
+                    : "text-white hover:text-[#4CD1C0] after:scale-x-0"
+                }
+                after:content-['']
+                after:absolute
+                after:left-0
+                after:-bottom-1
+                after:w-full
+                after:h-[2px]
+                after:bg-gradient-to-r after:from-[#24BEB0] after:to-[#6fe9dc]
+                after:origin-left
+                after:transition-transform after:duration-300
+              `}
             >
               {item.name}
             </button>
           ))}
+
+          {/* Sponsors → Separate Page */}
+          <Link
+            to="/sponsors"
+            className="
+              relative text-[15px] font-semibold tracking-wide
+             text-white hover:text-[#4CD1C0]
+              transition-all duration-300
+              after:content-['']
+              after:absolute after:left-0 after:-bottom-1
+              after:w-full after:h-[2px]
+              after:bg-gradient-to-r after:from-[#24BEB0] after:to-[#6fe9dc]
+              after:scale-x-0 hover:after:scale-x-100
+              after:origin-left after:transition-transform
+            "
+          >
+            Sponsors
+          </Link>
         </div>
 
         {/* Right Section */}
@@ -211,20 +227,29 @@ export default function Navbar() {
         <div className="md:hidden bg-black/60 backdrop-blur-xl border-t border-white/10 rounded-b-xl">
           <div className="flex flex-col space-y-3 px-9 py-4">
             {[
-              { name: "Home", href: "#landing" },
-              { name: "About", href: "#about" },
-              { name: "Competitions", href: "#competitions" },
-              { name: "Workshops", href: "#workshops" },
-              { name: "Past Speakers", href: "#speakers" },
+              { name: "Home", id: "landing" },
+              { name: "About", id: "about" },
+              { name: "Competitions", id: "competitions" },
+              { name: "Workshops", id: "workshops" },
+              { name: "Past Speakers", id: "speakers" },
             ].map((item) => (
               <button
                 key={item.name}
-                onClick={() => handleNavClick(item.href.replace("#", ""))}
+                onClick={() => handleNavClick(item.id)}
                 className="text-left text-white font-medium hover:text-[#4CD1C0] transition"
               >
                 {item.name}
               </button>
             ))}
+
+            {/* Sponsors → Separate Page */}
+            <Link
+              to="/sponsors"
+              onClick={() => setIsOpen(false)}
+              className="text-left text-white font-medium hover:text-[#4CD1C0] transition"
+            >
+              Sponsors
+            </Link>
           </div>
         </div>
       )}

@@ -1,6 +1,5 @@
 import { Check, X } from "lucide-react";
 
-/* -------- MASTER FEATURE LIST (ORDER FIXED) -------- */
 const ALL_FEATURES = [
   "3 Days, 2 Nights Accommodation",
   "Breakfast Included",

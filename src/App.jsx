@@ -6,8 +6,8 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Timeline from "./pages/Timeline";
 import Register from "./pages/Register";
+import Sponsors from "./pages/Sponsors";
 import ScrollToTop from "./components/ScrollToTop";
-
 import CursorSparkle from "./components/CursorSparkle";
 import DotCursor from "./components/DotCursor";
 
@@ -41,6 +41,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/timeline" element={<Timeline />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/sponsors" element={<Sponsors />} />
       </Routes>
 
       <Footer />
