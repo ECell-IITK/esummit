@@ -1,4 +1,4 @@
-import{r,u as o,a as i,j as e,m as t}from"./index-DiN2n6UC.js";const c="/esummit/assets/backg-BilRNwMF.jpg",m="/esummit/assets/theme2-B9G1uxLK.mp4";function h(){const n=r.useRef(null),s=r.useRef(null),{scrollYProgress:a}=o({target:s,offset:["start end","center center"]}),l=i(a,[0,1],[0,-520]),d=i(a,[0,1],[0,480]);return e.jsxs("section",{ref:n,id:"about",className:`\r
+import{r,u as o,a as i,j as e,m as t}from"./index-CzI0w6N-.js";const c="/esummit/assets/backg-BilRNwMF.jpg",m="/esummit/assets/theme2-B9G1uxLK.mp4";function h(){const n=r.useRef(null),s=r.useRef(null),{scrollYProgress:a}=o({target:s,offset:["start end","center center"]}),l=i(a,[0,1],[0,-520]),d=i(a,[0,1],[0,480]);return e.jsxs("section",{ref:n,id:"about",className:`\r
         relative z-10\r
         pt-16 pb-6\r
         px-6 md:px-12 lg:px-20\r
