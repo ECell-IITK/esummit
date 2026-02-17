@@ -26,7 +26,7 @@ import sponsor24 from "../assets/images/startUpNews.png";
 import sponsor25 from "../assets/images/apd.png";
 import sponsor26 from "../assets/images/cmyuva.png";
 import sponsor27 from "../assets/images/sbi.png";
-import sponsor28 from "../assets/images/languify.png";
+import sponsor28 from "../assets/images/kiwi.png";
 
 const poweredSponsors = [
   { tier: "Title", logo: sponsor1 },
@@ -58,7 +58,7 @@ const otherSponsors = [
   { tier: "Official Incubation Partner", logo: sponsor10 }, // SIIC
 
   // --- TECHNOLOGY ---
-  { tier: "Technology Partner", logo: sponsor7 }, // Technopark
+  // { tier: "Technology Partner", logo: sponsor7 }, // Technopark
   { tier: "Cyber Security Partner", logo: sponsor21 }, // C3i
 
   // --- BEVERAGE ---
@@ -68,7 +68,10 @@ const otherSponsors = [
   { tier: "Smile Partner", logo: sponsor17 }, // Habbits
 
   // --- CRUNCH ---
-  { tier: "Crunch Partner", logo: sponsor14 }, // Ruskle
+  { tier: "Crunch Partner", logo: sponsor14 }, // Kiwi
+
+  // --- CRUNCH ---
+  { tier: "Snack Partner", logo: sponsor28 }, // Ruskle
 
   // --- GROOMING ---
   { tier: "Grooming Partner", logo: sponsor6 }, // Lets Shave
