@@ -59,7 +59,7 @@ export default function Home() {
           <WhatWeDo />
           <Competitions />
           <Workshops />
-          <Judges />
+          {/* <Judges /> */}
           <Speakers />
         </Suspense>
       </main>
